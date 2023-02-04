@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+:root{
+
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&family=Raleway:ital@0;1&display=swap');
+
+    background: linear-gradient(45deg, rgba(3, 52, 97, 0.93) 0%, #65bdf0 100%);
+    animation: background-animate 14s ease infinite;
+    background-size: 200%;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    
+}
+:root, .frame, .frame-texts, .initial-screen,.final-screen{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame{
+    background-color: white;
+    width: min(90vw,42rem);
+    padding: 4.8rem 4.8rem 4.8rem 4.8rem;
+    border-radius: .5rem ;
+    box-shadow: 0px 20px 50px rgba(42, 48, 54, 0.74);
+}
+.initial-screen, .final-screen{
+    gap: 2rem;
+}
+
+h1{
+    font-size: 2.4rem;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+}
+.initial-screen p,button{
+    font-size: 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+}
+.frame-texts{
+    gap: 1.4rem;
+}
+.hide{
+    display: none;
+}
+.smash:hover{
+    animation-name: cookie;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+}
+.luck-message{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    background-color: #d3e4ee;
+    padding: 1.4rem;
+    border-radius: .4rem;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(85,85,85, 0.5);
+}
+.luck-message p{
+    font-size: 1.5rem;
+
+}
+
+button{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffff;
+    background-color: #ff9500;
+    padding: 1.6rem;
+    border-radius: .4rem;
+    border: none;
+}
+
+@keyframes cookie {
+    0%{
+        transform: rotate(1.5deg);
+    }
+    50%{
+        transform: rotate(-1.5deg);
+    }
+    100%{
+        transform: rotate(1.5deg);
+
+    }
+}
+@keyframes background-animate{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50% ;
+    }
+    100%{
+        background-position: 0% 50%;
+
+    }
+}
